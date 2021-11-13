@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+:root {
+  --dark-blue: #141E30;
+  --blue: #243B55;
+  --border-radius: 0.3125rem;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  transition: all .2s linear;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  background-color: var(--dark-blue);
+  background-image: linear-gradient(62deg, #141E30 0%, #243B55 100%);
+  background-repeat: no-repeat;
+  padding: 2rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  width: 64rem;
+}
+
+.header-lg {
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+  color: #ffffff
+}
+
+.tabs__nav {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.menu .menu__list .menu__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+}
+
+.menu .menu__list .menu__description {
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.tabs__nav li {
+  margin-right: 1rem;
+  
+  display: flex;
+}
+
+.tabs__nav li:last-child {
+  margin-right: 0;
+}
+
+.tabs__nav li a {
+  color: var(--blue);
+  background-color: #ffffff;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1.25rem;
+  border: 0.125rem solid #ffffff;
+  text-align: center;
+}
+
+.tabs__nav li .active,
+.tabs__nav li a:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.menu__column .menu__description {
+  font-weight: 400;
+}
+
+.menu__column .menu__price {
+  text-align: center;
+  font-weight: 600;
+}
+
+.menu__price span {
+  display: block;
+  font-weight: 400;
+  font-size: .9rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+}
+
+.menu.dinner,
+.menu.pizza,
+.menu.wines,
+.menu.beverages,
+.menu.desserts {
+  display: none;
+}
+
+.menu.active {
+  display: block;
+}
+
+.menu__list.two-columns .menu__column {
+  flex-basis: 49.99%;
+}
+
+.menu__list.three-columns .menu__column {
+  flex-basis: 33.33%;
+}
+
+.menu__list.two-columns .menu__column:first-child,
+.menu__list.three-columns .menu__column:first-child {
+  flex-basis: 80%;
+}
+
+.menu__list.two-columns .menu__column,
+.menu__list.three-columns .menu__column {
+  flex-basis: 10%;
+}
+
+footer {
+  color: #ffffff;
+  text-align: center;
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+@media only screen and (max-width: 61.99875rem) { /* 991.98px - tablets less than 992px */
+  .container {
+      width: 100%;
+  }
+  html {
+    font-size: 60%;
+  }
+}
+
+@media only screen and (max-width: 35.99875rem) { /* 575.98px - mobile less than 576px */
+  html {
+      font-size: 50%;
+  }
+
+  ul.tabs__nav {
+      padding: 2rem 0;
+  }
+
+  .menu__list.two-columns .menu__column:first-child,
+  .menu__list.three-columns .menu__column:first-child {
+    flex-basis: 60%;
+  }
+
+  .menu__list.two-columns .menu__column,
+  .menu__list.three-columns .menu__column {
+    flex-basis: 20%;
+  }
+
+  .tabs__nav li {
+    margin-right: .5rem;
+  }
+}
+
