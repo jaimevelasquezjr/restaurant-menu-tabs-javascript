@@ -156,8 +156,12 @@ body {
   flex-basis: 10%;
 }
 
-footer {
+footer,
+footer a {
   color: #ffffff;
+}
+
+footer {
   text-align: center;
   font-size: .9rem;
   text-transform: uppercase;
