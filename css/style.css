@@ -16,7 +16,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  transition: all .2s linear;
 }
 
 *,
@@ -58,6 +57,10 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem;
+}
+
+.tabs__nav li a {
+  transition: all .2s linear;
 }
 
 .menu__list {
@@ -138,22 +141,15 @@ body {
   display: block;
 }
 
-.menu__list.two-columns .menu__column {
-  flex-basis: 49.99%;
+.menu__list.double-price > div:last-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.menu__list.three-columns .menu__column {
-  flex-basis: 33.33%;
-}
-
-.menu__list.two-columns .menu__column:first-child,
-.menu__list.three-columns .menu__column:first-child {
-  flex-basis: 80%;
-}
-
-.menu__list.two-columns .menu__column,
-.menu__list.three-columns .menu__column {
-  flex-basis: 10%;
+.menu__list.double-price > div:last-child > div:last-child {
+  margin-left: 1rem;
 }
 
 footer,
@@ -186,18 +182,17 @@ footer {
       padding: 2rem 0;
   }
 
-  .menu__list.two-columns .menu__column:first-child,
-  .menu__list.three-columns .menu__column:first-child {
-    flex-basis: 60%;
-  }
-
-  .menu__list.two-columns .menu__column,
-  .menu__list.three-columns .menu__column {
-    flex-basis: 20%;
-  }
-
   .tabs__nav li {
     margin-right: .5rem;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu__list.double-price > div:last-child {
+    margin-top: 1rem;
   }
 }
 
