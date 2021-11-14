@@ -186,8 +186,8 @@ footer {
     margin-right: .5rem;
   }
 
-  .menu__list {
-    flex-direction: column;
+  .menu .menu__list {
+    display: block;
     text-align: center;
   }
 
