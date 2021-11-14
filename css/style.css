@@ -164,7 +164,7 @@ footer {
   letter-spacing: .1rem;
 }
 
-@media only screen and (max-width: 61.99875rem) { /* 991.98px - tablets less than 992px */
+@media only screen and (max-width: 991.98px) { /* 991.98px - tablets less than 992px */
   .container {
       width: 100%;
   }
@@ -173,7 +173,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 35.99875rem) { /* 575.98px - mobile less than 576px */
+@media only screen and (max-width: 575.98px) { /* 575.98px - mobile less than 576px */
   html {
       font-size: 50%;
   }
